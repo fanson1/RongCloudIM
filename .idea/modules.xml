@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RongCloudIM.iml" filepath="$PROJECT_DIR$/RongCloudIM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rong_Cloud_IMKit_with_CallKit/Rong_Cloud_IMKit_with_CallKit.iml" filepath="$PROJECT_DIR$/Rong_Cloud_IMKit_with_CallKit/Rong_Cloud_IMKit_with_CallKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
