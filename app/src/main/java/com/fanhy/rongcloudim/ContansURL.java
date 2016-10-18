@@ -5,6 +5,8 @@ package com.fanhy.rongcloudim;
  */
 
 public class ContansURL {
-    public static final String login = "http://123.56.145.151:8080/RongCloud/Login";
-    public static final String register = "http://123.56.145.151:8080/RongCloud/Register";
+    public static String baseURL = "http://123.56.145.151:8080/RongCloud/";
+    public static String getAllUser = baseURL+"GetAllUser";
+    public static String login = baseURL+"Login";
+    public static String register = baseURL+"Register";
 }

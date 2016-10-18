@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -36,18 +40,32 @@ public class LoginActivity extends AppCompatActivity {
         public void onSuccess(String response) {
             if (response != null) {
                 BaseUser baseUser = new Gson().fromJson(response.toString(), BaseUser.class);
+                Toast.makeText(getApplicationContext(), "登录成功:"+baseUser.getName(), Toast.LENGTH_SHORT).show();
                 RongCloudApp.token = baseUser.getToken();
                 RongCloudApp.connect(RongCloudApp.token);
+                RongCloudApp.baseUser = baseUser;
+                finish();
+            } else{
+                Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         public void onFailure(Exception e) {
-
+            Toast.makeText(getApplicationContext(), "注册失败.:"+toString(), Toast.LENGTH_SHORT).show();
         }
     };
 
     @OnClick(R.id.btn_login)
     public void onClick() {
+        String name = edtLoginName.getText().toString();
+        String pwd = edtLoginPwd.getText().toString();
+
+        String url = ContansURL.login;
+        List<OkHttpUtil.Param> params = new ArrayList<>();
+        params.add(new OkHttpUtil.Param("name", name));
+        params.add(new OkHttpUtil.Param("pwd", pwd));
+
+        OkHttpUtil.post(url, callback, params);
     }
 }

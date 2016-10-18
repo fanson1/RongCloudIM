@@ -1,10 +1,12 @@
 package com.fanhy.rongcloudim;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2016/10/17 0017.
  */
 
-public class BaseUser {
+public class BaseUser implements Serializable{
     // 用户 Token，可以保存应用内，长度在 256 字节以内.用户 Token，可以保存应用内，长度在 256 字节以内。
     private String token;
     // 用户 Id，与输入的用户 Id 相同.用户 Id，与输入的用户 Id 相同。
