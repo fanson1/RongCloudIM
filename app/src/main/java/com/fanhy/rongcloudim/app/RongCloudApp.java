@@ -22,8 +22,8 @@ import io.rong.imlib.RongIMClient;
  */
 
 public class RongCloudApp extends Application {
-    public static String appKey = "p5tvi9dstiv54";
-    public static String appSecret = "blMNAvgLqfCDL6";
+    public static String appKey = "p5tvi9dstiv54";// key
+    public static String appSecret = "blMNAvgLqfCDL6";// secret
     public static String token = "";
     public static BaseUser baseUser;
     public static List<BaseUser> baseUserList = new ArrayList<>();
