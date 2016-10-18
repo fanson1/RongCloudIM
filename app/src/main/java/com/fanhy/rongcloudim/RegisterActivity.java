@@ -1,12 +1,15 @@
 package com.fanhy.rongcloudim;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.fanhy.rongcloudim.app.RongCloudApp;
+import com.fanhy.rongcloudim.contans.ContansURL;
+import com.fanhy.rongcloudim.entity.BaseUser;
+import com.fanhy.rongcloudim.util.OkHttpUtil;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -22,8 +25,6 @@ public class RegisterActivity extends AppCompatActivity {
     EditText edtRegisterName;
     @InjectView(R.id.edt_register_pwd)
     EditText edtRegisterPwd;
-    @InjectView(R.id.btn_register)
-    Button btnRegister;
     OkHttpUtil.ResultCallback callback = new OkHttpUtil.ResultCallback<String>() {
 
         @Override
@@ -34,6 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
                 RongCloudApp.token = baseUser.getToken();
                 RongCloudApp.connect(RongCloudApp.token);
                 RongCloudApp.baseUser = baseUser;
+
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+
                 finish();
 
             } else{
@@ -46,9 +50,6 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "注册失败:"+e.toString(), Toast.LENGTH_SHORT).show();
         }
     };
-
-    @InjectView(R.id.activity_register)
-    LinearLayout activityRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

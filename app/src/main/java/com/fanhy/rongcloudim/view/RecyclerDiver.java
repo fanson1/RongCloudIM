@@ -1,4 +1,4 @@
-package com.fanhy.rongcloudim;
+package com.fanhy.rongcloudim.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

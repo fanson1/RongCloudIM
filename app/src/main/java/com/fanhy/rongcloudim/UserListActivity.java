@@ -7,6 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.RelativeLayout;
 
+import com.fanhy.rongcloudim.adapter.MyRecyclerAdapter;
+import com.fanhy.rongcloudim.app.RongCloudApp;
+import com.fanhy.rongcloudim.contans.ContansURL;
+import com.fanhy.rongcloudim.entity.BaseUser;
+import com.fanhy.rongcloudim.util.OkHttpUtil;
+import com.fanhy.rongcloudim.view.RecyclerDiver;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -40,7 +46,6 @@ public class UserListActivity extends AppCompatActivity {
     OkHttpUtil.ResultCallback callback = new OkHttpUtil.ResultCallback() {
         @Override
         public void onSuccess(Object response) {
-            Log.d("fanhy", "onSuccess----用户列表"+response.toString());
             BaseUser[] arr = new Gson().fromJson(response.toString(), BaseUser[].class);
             model.clear();
             RongCloudApp.baseUserList.clear();

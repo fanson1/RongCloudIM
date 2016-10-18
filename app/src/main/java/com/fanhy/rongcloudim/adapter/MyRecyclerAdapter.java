@@ -1,4 +1,4 @@
-package com.fanhy.rongcloudim;
+package com.fanhy.rongcloudim.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.fanhy.rongcloudim.R;
+import com.fanhy.rongcloudim.entity.BaseUser;
 
 import java.util.List;
 

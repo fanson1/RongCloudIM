@@ -1,4 +1,4 @@
-package com.fanhy.rongcloudim;
+package com.fanhy.rongcloudim.contans;
 
 /**
  * Created by Administrator on 2016/10/17 0017.

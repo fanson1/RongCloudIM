@@ -1,4 +1,4 @@
-package com.fanhy.rongcloudim;
+package com.fanhy.rongcloudim.util;
 
 import android.os.Handler;
 import android.os.Looper;

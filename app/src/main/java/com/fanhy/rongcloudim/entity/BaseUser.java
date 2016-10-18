@@ -1,4 +1,4 @@
-package com.fanhy.rongcloudim;
+package com.fanhy.rongcloudim.entity;
 
 import java.io.Serializable;
 
